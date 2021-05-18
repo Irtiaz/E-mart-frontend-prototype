@@ -28,13 +28,13 @@
 	font-weight: 500;
 }
 
-.navContainer nav ul {
+.navContainer ul {
 	display: flex;
 	list-style: none;
 	padding: 0;
 }
 
-.navContainer nav li {
+.navContainer li {
 	margin-left: 2em;
 }
 
@@ -58,7 +58,11 @@
 		text-align: center;
 	}
 
-	.navContainer nav ul {
+	.navContainer ul {
 		justify-content: center;
+	}
+
+	.navContainer li {
+		margin: 0 1em;
 	}
 }
