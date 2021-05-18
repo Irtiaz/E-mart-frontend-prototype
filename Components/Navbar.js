@@ -18,7 +18,7 @@ export default class Navbar extends React.Component {
 									<a>LOGO</a>
 								</Link>
 							</h1>
-							<div>We are the best</div>
+							<div>Slogan</div>
 						</div>
 
 						<nav>
