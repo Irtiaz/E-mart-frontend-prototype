@@ -6,7 +6,7 @@
 .navContainer {
 	display: flex;
 	justify-content: space-between;
-	padding: 0;
+	padding: 0.5em 0;
 }
 
 .navContainer h1 {
@@ -48,21 +48,50 @@
 	color: snow;
 }
 
+.collapseButton {
+	display: none;
+	padding: 0.25em;
+	border: 1px solid grey;
+	border-radius: 0.5em;
+	cursor: pointer;
+}
+
+.collapseButton div {
+	width: 1em;
+	height: 0.1em;
+	margin: 0.25em 0;
+	background: white;
+}
+
 
 @media (max-width: 600px) {
 	.navContainer {
 		flex-direction: column;
 	}
 
-	.header {
-		text-align: center;
+
+	.logo_collapseButton_wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.collapseButton {
+		margin: auto 0;
+		display: inline-block;
 	}
 
 	.navContainer ul {
-		justify-content: center;
+		flex-direction: column;
+		text-align: right;
 	}
 
 	.navContainer li {
-		margin: 0 1em;
+		margin: 0.5em 0;
 	}
+
+	.hidden {
+		display: none;
+	}
+
+
 }

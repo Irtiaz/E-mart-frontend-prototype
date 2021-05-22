@@ -6,22 +6,47 @@ import Container from './Container.js';
 import styles from '../styles/Navbar.module.css';
 
 export default class Navbar extends React.Component {
+	state = {
+		linksShow: false
+	};
+
+	handleCollapse = () => {
+		this.setState({
+			linksShow: !this.state.linksShow
+		});
+	}
+
+
 	render() {
+
+		const navClassName = !this.state.linksShow? styles.hidden : null;
+
 		return (
 			<header className={styles.header}>
 				<Container>
 					<div className={styles.navContainer}>
 
-						<div>
-							<h1>
-								<Link href="/">
-									<a>LOGO</a>
-								</Link>
-							</h1>
-							<div>Slogan</div>
+						<div className={styles.logo_collapseButton_wrapper}>
+
+							{/*Logo And Slogan*/}
+							<div>
+								<h1>
+									<Link href="/">
+										<a>LOGO</a>
+									</Link>
+								</h1>
+								<div>Slogan</div>
+							</div>
+
+							{/*Collpase Button*/}
+							<div className={styles.collapseButton} onClick={this.handleCollapse} ref={this.collapseButtonRef}>
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
 						</div>
 
-						<nav>
+						<nav className={navClassName}>
 							<ul>
 								<li>
 									<Link href="#">
